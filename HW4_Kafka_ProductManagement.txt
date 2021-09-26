@@ -1,0 +1,10 @@
+Product Management
+I'd like to investigate demand on/interest in healthy food
+
+Product Producer (barcode, name, price,category, special category (gluten free/sugar free/lactose free); organic).
+
+Product_raw_data
+Demand for any healthy food in total
+Demand for healthy per category. 
+
+Streams to investigate demand for each category and total demand.
