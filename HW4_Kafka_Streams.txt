@@ -1,0 +1,41 @@
+USER MANAGEMENT
+CREATE STREAM camp_adult_users AS
+	SELECT 
+	  email,
+	  first_name,
+ 	  last_name,
+	  age,
+	  address,
+          gender,
+          job,
+          has_children_under_sixteen
+	FROM camp_users_input
+	WHERE age >=18
+	EMIT CHANGES
+
+
+
+PRODUCT MANAGEMENT
+CREATE STREAM camp_adult_users AS
+	SELECT 
+	  barcode,
+	  name,
+ 	  price,
+	  category
+	FROM product_demand_input
+	1.1 WHERE product category in ('gluten free', 'sugar free', 'lactose free')
+	1.2 WHERE product category = 'gluten free'
+	1.3 WHERE product category = 'sugar free'
+	1.4 WHERE product category = 'lactose free'
+	EMIT CHANGES
+
+
+CREATE STREAM camp_adult_users AS
+	SELECT 
+	  barcode,
+	  name,
+ 	  price,
+	  category
+	FROM product_demand_input
+	WHERE product category = 'organic'
+	EMIT CHANGES
