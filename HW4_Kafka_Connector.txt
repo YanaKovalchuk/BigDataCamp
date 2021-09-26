@@ -1,0 +1,12 @@
+connector
+name=camp-users-file-sink
+connector.class=FileStreamSinkConnector
+tasks.max=1
+file=/home/rootuser/PracticeKafka/camp_users.txt
+topics=camp-users
+
+Create connector to file system 
+confluent local services connect connector load camp-users-file-sink -c file-connector-sink.properties
+
+Check connector status
+confluent local services connect connector status camp-users-file-sink
